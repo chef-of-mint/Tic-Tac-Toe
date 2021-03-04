@@ -24,5 +24,20 @@ class HomeActivity : AppCompatActivity() {
         tabs.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_person_search_24)
         tabs.getTabAt(2)!!.setIcon(R.drawable.ic_baseline_article_24)
 
+        logout.setOnClickListener{
+            AlertDialog.Builder(this).apply {
+                setTitle("Are you sure?")
+                setPositiveButton("Yes") { _, _ ->
+
+                    FirebaseAuth.getInstance().signOut()
+                    logout()
+
+                }
+                setNegativeButton("Cancel") { _, _ ->
+                }
+            }.create().show()
+        }
+
     }
+
 }
