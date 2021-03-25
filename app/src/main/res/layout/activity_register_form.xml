@@ -50,6 +50,7 @@
         android:textColorHint="#00FFF0"
         android:layout_marginHorizontal="10dp"
         android:textColor="@color/black"
+        android:inputType="textPassword"
         />
 
     <ProgressBar
