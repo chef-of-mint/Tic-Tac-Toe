@@ -1,14 +1,15 @@
 package com.example.loginregisterfirebase.ui.home
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.loginregisterfirebase.*
+import com.example.loginregisterfirebase.ui.fragments.BlogFragment
+import com.example.loginregisterfirebase.ui.fragments.RequestsFragment
+import com.example.loginregisterfirebase.ui.fragments.UsersFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -40,5 +41,8 @@ class HomeFragment : Fragment() {
         tabs.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_emoji_people_24)
         tabs.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_person_search_24)
         tabs.getTabAt(2)!!.setIcon(R.drawable.ic_baseline_article_24)
+
+        //tabs.setSelectedTabIndicatorColor(Color.parseColor("#000000"))
+
     }
 }

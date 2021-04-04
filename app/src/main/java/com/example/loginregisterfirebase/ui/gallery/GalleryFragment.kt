@@ -51,7 +51,7 @@ class GalleryFragment : Fragment() {
                 .into(image_view)
             edit_text_name.setText(user.displayName)
             text_email.text=user.email
-            text_phone.text=if(user.phoneNumber.isNullOrEmpty())"Add Number" else user.phoneNumber
+            text_my_bio.text=if(user.phoneNumber.isNullOrEmpty())"Enter your bio" else user.phoneNumber
 
             //headername.text = user.displayName
            // if (user.isEmailVerified) {

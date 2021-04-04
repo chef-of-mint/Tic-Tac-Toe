@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context=".ui.fragments.PostBlogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post your blog!!"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/teal_200"
+            android:textSize="30sp"
+            android:fontFamily="cursive"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title : "
+
+                android:padding="10dp"
+                android:textColor="@color/teal_200"
+                android:textSize="20sp"
+                android:fontFamily="cursive"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the Title"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author Name : "
+
+                android:padding="10dp"
+                android:textColor="@color/teal_200"
+                android:textSize="20sp"
+                android:fontFamily="cursive"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Name"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content :"
+            android:padding="10dp"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="cursive"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write out here!"
+            android:gravity="center"
+
+            android:padding="10dp"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="Post"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

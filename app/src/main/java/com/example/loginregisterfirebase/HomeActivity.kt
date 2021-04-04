@@ -3,6 +3,9 @@ package com.example.loginregisterfirebase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import com.example.loginregisterfirebase.ui.fragments.BlogFragment
+import com.example.loginregisterfirebase.ui.fragments.RequestsFragment
+import com.example.loginregisterfirebase.ui.fragments.UsersFragment
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
 

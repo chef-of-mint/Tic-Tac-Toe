@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.loginregisterfirebase.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="Profile"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.loginregisterfirebase.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Single Player Mode"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
