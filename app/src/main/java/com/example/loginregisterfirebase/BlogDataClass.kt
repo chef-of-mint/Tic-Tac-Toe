@@ -1,8 +1,12 @@
 package com.example.loginregisterfirebase
 
 data class BlogDataClass(
-        val id: Int,
-        val title:String,
-        val content:String,
-        val author: String
+
+
+        var content:String? =null,
+        var author: String? =null,
+        var title:String? =null,
+        var likesCount: String? =null,
+        var id: String? =null,
+
 )

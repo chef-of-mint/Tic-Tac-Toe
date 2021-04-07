@@ -25,9 +25,10 @@ class BlogsAdapter(val blog: List<BlogDataClass>) : RecyclerView.Adapter<BlogsAd
 
     override fun onBindViewHolder(holder: BlogViewHolder, position: Int) {
         val blogs = blog[position]
-        holder.view.blog_title.text = blogs.title
         holder.view.blog_content.text = blogs.content
         holder.view.blog_author.text = blogs.author
+        holder.view.blog_title.text = blogs.title
+
 //below code have some bugs  :(
         holder.view.blog_card.setOnClickListener{
             val appCompatActivity = it.context as AppCompatActivity

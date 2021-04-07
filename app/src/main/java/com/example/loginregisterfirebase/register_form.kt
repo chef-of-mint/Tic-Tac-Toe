@@ -7,12 +7,18 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_register_form.*
 
 
 class register_form : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
+
+    val database = FirebaseDatabase.getInstance()
+    val myRef = database.getReference("user").push()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +27,17 @@ class register_form : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+
         register.setOnClickListener{
             val email=email_text.text.toString().trim()
             val password=password_text.text.toString().trim()
-
-            if(email.isEmpty()){
+            val name=name_text.text.toString().trim()
+            if(name.isEmpty()){
+                name_text.error="Name Required"
+                name_text.requestFocus()
+                return@setOnClickListener
+            }
+            else if(email.isEmpty()){
                 email_text.error="Email Required"
                 email_text.requestFocus()
                 return@setOnClickListener
@@ -47,6 +59,19 @@ class register_form : AppCompatActivity() {
                         loading.visibility=View.INVISIBLE
                         if (task.isSuccessful) {
                             login()
+
+                            val currentUser = FirebaseAuth.getInstance().currentUser
+
+
+
+                            currentUser?.let{ user->
+
+                                myRef.child("id").setValue(user.uid)
+                                myRef.child("name").setValue(name)
+                                myRef.child("email").setValue(user.email)
+                                myRef.child("profileUrl").setValue("https://picsum.photos/200")
+                                myRef.child("Rating").setValue("1700")
+                            }
                         } else {
                             task.exception?.message?.let {
                                 toast(it)

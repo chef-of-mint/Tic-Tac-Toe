@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
         adapter.addFragment(UsersFragment(), "Users")
         adapter.addFragment(BlogFragment(), "Blogs")
 
+
         this.viewPager.adapter = adapter
         tabs.setupWithViewPager(viewPager)
 
