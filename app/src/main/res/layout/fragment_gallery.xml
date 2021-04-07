@@ -14,14 +14,24 @@
             android:id="@+id/layoutHead"
             android:background="@color/teal_200"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="240dp">
 
             <ImageView
                 android:id="@+id/image_view"
                 android:src="@drawable/userphoto"
                 android:layout_centerInParent="true"
                 android:layout_width="90dp"
+                android:background="@color/teal_700"
                 android:layout_height="90dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(Click to change)"
+                android:layout_below="@id/image_view"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:id="@+id/helptext"
+                android:layout_marginTop="3dp"/>
 
             <EditText
                 android:hint="Enter Name"
@@ -30,7 +40,7 @@
                 android:textColor="@android:color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/image_view"
+                android:layout_below="@id/helptext"
                 tools:text="Tic-Tac-Toe Master"
                 android:enabled="true"
                 android:id="@+id/edit_text_name"
